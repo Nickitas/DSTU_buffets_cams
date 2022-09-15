@@ -1,5 +1,6 @@
 from requests.auth import  HTTPBasicAuth
 from flask import Flask, Response
+from flask_cors import CORS, cross_origin
 import cv2
 
 class VideoCamera(object):
@@ -21,6 +22,8 @@ def gen(camera):
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/video_feed')
 def video_feed():
