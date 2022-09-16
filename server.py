@@ -5,7 +5,7 @@ import cv2
 
 class VideoCamera(object):
     def __init__(self):
-        self.cap = cv2.VideoCapture(0) 
+        self.cap = cv2.VideoCapture('rtsp://admin:dragon88@192.168.1.200:554/RVi/1/1') 
     
     def __del__(self):
         self.cap.release()
@@ -30,4 +30,4 @@ def video_feed():
     return Response(gen(VideoCamera()), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__=="__main__":
-	app.run()
+	app.run(port=5001)
