@@ -1,0 +1,15 @@
+
+
+.cam_list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
+    grid-gap: 22px;
+    width: 100%;
+
+
+    @media (max-width: 657px) {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-auto-rows: 400px;
+    }
+}

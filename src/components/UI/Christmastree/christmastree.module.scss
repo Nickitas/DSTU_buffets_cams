@@ -1,0 +1,24 @@
+.christmastree_wrapper {
+    position: fixed;
+    right: -10%;
+    bottom: -70px;
+    z-index: 9999;
+    transform: translateY(0%);
+    overflow: hidden;
+    transition: all 1s ease-in;
+
+    img {
+        transform: rotate(-6deg);
+        width: 25vw;
+        transition: all .2s ease-in;
+        cursor: pointer;
+        &:hover {
+            opacity: .9;
+            transform: translateY(2%);
+        }
+    }
+
+    &.hidden {
+        transform: translateY(200%);
+    }
+}

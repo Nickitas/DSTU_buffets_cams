@@ -1,0 +1,35 @@
+
+
+.button_sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.3em;
+    color: #fff;
+    background-color: #1a1a1a;
+
+    cursor: pointer;
+    transition: border-color 0.25s;
+    &:hover {
+        border-color: #646cff;
+    }
+    &:focus,
+    &:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+    }
+
+    @media (prefers-color-scheme: light) {
+        background-color: #f9f9f9;
+        color: 646cff;
+        border: 1px solid #646cff;
+        &:hover {
+            border-color: #646cff;
+        }
+    }
+}
